@@ -9,14 +9,44 @@ let bandData = [
   {
     id: 1,
     name: "Nirvanna",
+    albums: [
+      {
+        id: 1,
+        albumName: "Nevermind"
+      },
+      {
+        id: 2,
+        albumName: "In Utero"
+      }
+    ]
   },
   {
     id: 2,
-    name: "Bob Marley and the Wailers"
+    name: "Bob Marley and the Wailers",
+    albums: [
+      {
+        id: 1,
+        albumName: "Legend"
+      },
+      {
+        id: 2,
+        albumName: "Natural Mystic"
+      }
+    ]
   },
   {
     id: 3,
-    name: "Beastie Boys"
+    name: "Beastie Boys",
+    albums: [
+      {
+        id: 1,
+        albumName: "Licensed to Ill"
+      },
+      {
+        id: 2,
+        albumName: "Hello Nasty"
+      }
+    ]
   }
 ]
 
