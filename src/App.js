@@ -29,6 +29,14 @@ class App extends Component {
     this.state = {
       bandData: bandData
     }
+
+    this._deleteBand = this._deleteBand.bind(this);
+  }
+
+  _deleteBand(band) {
+    let bands = this.state.bandData;
+    bands.splice(bands.indexOf(band), 1);
+    this.setState({bands});
   }
 
   render() {
@@ -36,7 +44,7 @@ class App extends Component {
     let self = this;
     let $bands = this.state.bandData.map((band)=> {
       return (
-        <Band key={band.id} band={band} />
+        <Band key={band.id} band={band} deleteBand={()=>self._deleteBand(band)}/>
       )
     });
 
