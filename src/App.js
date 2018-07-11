@@ -149,7 +149,9 @@ class App extends Component {
 
     return (
       <div className="App container">
-        <div className="row justify-content-center">
+        <a className="btn btn-primary" data-toggle="collapse" href="#bandCollapse" role="button" aria-expanded="false" aria-controls="bandCollapse">Show Bands</a>
+
+        <div id="bandCollapse" className="row justify-content-center collapse">
           {$bands}
         </div>
 

@@ -44,7 +44,11 @@ class Band extends Component {
       <div className="col-12 bandContainer">
         <h1 className="bandName">{this.props.band.name}</h1>
 
-        <div className="row justify-content-center">
+        {/* Add collapse for albums */}
+        <a className="btn btn-primary" data-toggle="collapse" href={`#album${this.props.band.id}`} role="button" aria-expanded="false" aria-controls={`album${this.props.band.id}`}>Show Albums</a>
+
+
+        <div id={`album${this.props.band.id}`} className="row justify-content-center collapse">
           <p>Albums</p>
           {$albums}
           <AlbumForm addAlbum={this._addAlbum}/>
