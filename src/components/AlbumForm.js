@@ -7,7 +7,8 @@ class AlbumForm extends Component {
     super(props);
 
     this.state = {
-      albumName: ''
+      albumName: '',
+      tracks: []
     }
 
     this._handleInput = this._handleInput.bind(this);

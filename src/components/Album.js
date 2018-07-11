@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Album.css';
 
 import Track from './Track.js';
+import TrackForm from './TrackForm.js';
 
 class Album extends Component {
 
@@ -23,7 +24,9 @@ class Album extends Component {
   }
 
   _addTrack(track) {
-
+    let tracks = this.state.tracks;
+    tracks.push(track);
+    this.setState({tracks});
   }
 
   render() {
@@ -41,7 +44,7 @@ class Album extends Component {
         <div className="row justify-content-center">
           <p>Tracks</p>
           {$tracks}
-          {/* <AlbumForm addAlbum={this._addAlbum}/> */}
+          <TrackForm addTrack={this._addTrack}/>
         </div>
 
         <input type="button" className="btn btn-danger" value="Delete Album" onClick={this.props.deleteAlbum}/>

@@ -25,7 +25,6 @@ class Band extends Component {
   }
 
   _addAlbum(album) {
-    console.log(album);
     let albums = this.state.albums;
     albums.push(album);
     this.setState({albums});
