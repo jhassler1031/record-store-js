@@ -29,11 +29,11 @@ let bandData = [
         albumName: "In Utero",
         tracks: [
           {
-            id: 1,
+            id: 3,
             trackName: "Track 1"
           },
           {
-            id: 2,
+            id: 4,
             trackName: "Track 2"
           }
         ]
@@ -45,29 +45,29 @@ let bandData = [
     name: "Bob Marley and the Wailers",
     albums: [
       {
-        id: 1,
+        id: 3,
         albumName: "Legend",
         tracks: [
           {
-            id: 1,
+            id: 5,
             trackName: "Track 1"
           },
           {
-            id: 2,
+            id: 6,
             trackName: "Track 2"
           }
         ]
       },
       {
-        id: 2,
+        id: 4,
         albumName: "Natural Mystic",
         tracks: [
           {
-            id: 1,
+            id: 7,
             trackName: "Track 1"
           },
           {
-            id: 2,
+            id: 8,
             trackName: "Track 2"
           }
         ]
@@ -79,29 +79,29 @@ let bandData = [
     name: "Beastie Boys",
     albums: [
       {
-        id: 1,
+        id: 5,
         albumName: "Licensed to Ill",
         tracks: [
           {
-            id: 1,
+            id: 9,
             trackName: "Track 1"
           },
           {
-            id: 2,
+            id: 10,
             trackName: "Track 2"
           }
         ]
       },
       {
-        id: 2,
+        id: 6,
         albumName: "Hello Nasty",
         tracks: [
           {
-            id: 1,
+            id: 11,
             trackName: "Track 1"
           },
           {
-            id: 2,
+            id: 12,
             trackName: "Track 2"
           }
         ]

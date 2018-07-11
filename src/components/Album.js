@@ -41,7 +41,10 @@ class Album extends Component {
       <div className="col-12 albumContainer">
         <p className="albumName">{this.props.album.albumName}</p>
 
-        <div className="row justify-content-center">
+        {/* Collapse/Open the track list */}
+        <a className="btn btn-primary" data-toggle="collapse" href={`#track${this.props.album.id}`} role="button" aria-expanded="false" aria-controls={`track${this.props.album.id}`}>Show Tracks</a>
+
+        <div id={`track${this.props.album.id}`} className="row justify-content-center collapse">
           <p>Tracks</p>
           {$tracks}
           <TrackForm addTrack={this._addTrack}/>
