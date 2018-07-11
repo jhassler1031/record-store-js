@@ -12,11 +12,31 @@ let bandData = [
     albums: [
       {
         id: 1,
-        albumName: "Nevermind"
+        albumName: "Nevermind",
+        tracks: [
+          {
+            id: 1,
+            trackName: "Track 1"
+          },
+          {
+            id: 2,
+            trackName: "Track 2"
+          }
+        ]
       },
       {
         id: 2,
-        albumName: "In Utero"
+        albumName: "In Utero",
+        tracks: [
+          {
+            id: 1,
+            trackName: "Track 1"
+          },
+          {
+            id: 2,
+            trackName: "Track 2"
+          }
+        ]
       }
     ]
   },
@@ -26,11 +46,31 @@ let bandData = [
     albums: [
       {
         id: 1,
-        albumName: "Legend"
+        albumName: "Legend",
+        tracks: [
+          {
+            id: 1,
+            trackName: "Track 1"
+          },
+          {
+            id: 2,
+            trackName: "Track 2"
+          }
+        ]
       },
       {
         id: 2,
-        albumName: "Natural Mystic"
+        albumName: "Natural Mystic",
+        tracks: [
+          {
+            id: 1,
+            trackName: "Track 1"
+          },
+          {
+            id: 2,
+            trackName: "Track 2"
+          }
+        ]
       }
     ]
   },
@@ -40,11 +80,31 @@ let bandData = [
     albums: [
       {
         id: 1,
-        albumName: "Licensed to Ill"
+        albumName: "Licensed to Ill",
+        tracks: [
+          {
+            id: 1,
+            trackName: "Track 1"
+          },
+          {
+            id: 2,
+            trackName: "Track 2"
+          }
+        ]
       },
       {
         id: 2,
-        albumName: "Hello Nasty"
+        albumName: "Hello Nasty",
+        tracks: [
+          {
+            id: 1,
+            trackName: "Track 1"
+          },
+          {
+            id: 2,
+            trackName: "Track 2"
+          }
+        ]
       }
     ]
   }
@@ -65,6 +125,7 @@ class App extends Component {
     this._addBand = this._addBand.bind(this);
   }
 
+  //Add/Delete Bands ===========================================================
   _deleteBand(band) {
     let bands = this.state.bandData;
     bands.splice(bands.indexOf(band), 1);
@@ -82,7 +143,7 @@ class App extends Component {
     let self = this;
     let $bands = this.state.bandData.map((band)=> {
       return (
-        <Band key={band.id} band={band} deleteBand={()=>self._deleteBand(band)}/>
+        <Band key={band.id} band={band} deleteBand={()=>self._deleteBand(band)} />
       )
     });
 

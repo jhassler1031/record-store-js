@@ -8,6 +8,7 @@ class BandForm extends Component {
 
     this.state = {
       name: '',
+      albums: []
     }
 
     this._handleInput = this._handleInput.bind(this);
@@ -32,7 +33,7 @@ class BandForm extends Component {
     return (
       <form onSubmit={this._addBand} className="bandForm">
         <div className="form-group">
-          <label htmlFor="bandInput">Enter URL</label>
+          <label htmlFor="bandInput">Enter Band Name</label>
           <input name="name" type="text" className="form-control" id="bandInput" placeholder="Enter Band Name" value={this.state.name} onChange={this._handleInput}/>
         </div>
 
