@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Band from './components/Band.js';
+import BandForm from './components/BandForm.js';
 
 //static data ==================================================================
 let bandData = [
@@ -31,11 +32,18 @@ class App extends Component {
     }
 
     this._deleteBand = this._deleteBand.bind(this);
+    this._addBand = this._addBand.bind(this);
   }
 
   _deleteBand(band) {
     let bands = this.state.bandData;
     bands.splice(bands.indexOf(band), 1);
+    this.setState({bands});
+  }
+
+  _addBand(band) {
+    let bands = this.state.bandData;
+    bands.push(band);
     this.setState({bands});
   }
 
@@ -52,6 +60,10 @@ class App extends Component {
       <div className="App container">
         <div className="row justify-content-center">
           {$bands}
+        </div>
+
+        <div className="row justify-content-center">
+          <BandForm addBand={this._addBand}/>
         </div>
       </div>
     );
