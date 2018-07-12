@@ -38,19 +38,23 @@ class Album extends Component {
       )
     });
     return (
-      <div className="col-12 albumContainer">
+      <div className="col-12  col-md-6 albumContainer">
         <p className="albumName">{this.props.album.albumName}</p>
 
         {/* Collapse/Open the track list */}
         <a className="btn btn-primary" data-toggle="collapse" href={`#track${this.props.album.id}`} role="button" aria-expanded="false" aria-controls={`track${this.props.album.id}`}>Show Tracks</a>
 
         <div id={`track${this.props.album.id}`} className="row justify-content-center collapse">
-          <p>Tracks</p>
+          <p className="col-12">Tracks</p>
           {$tracks}
-          <TrackForm addTrack={this._addTrack}/>
+          <div className="col-12">
+            <TrackForm addTrack={this._addTrack}/>
+          </div>
         </div>
 
-        <input type="button" className="btn btn-danger" value="Delete Album" onClick={this.props.deleteAlbum}/>
+        <div className="col-12">
+          <input type="button" className="btn btn-danger" value="Delete Album" onClick={this.props.deleteAlbum}/>
+        </div>
 
       </div>
     );

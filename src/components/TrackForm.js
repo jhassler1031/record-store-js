@@ -32,7 +32,7 @@ class TrackForm extends Component {
     return (
       <form onSubmit={this._addTrack} className="trackForm">
         <div className="form-group">
-          <label htmlFor="trackInput">Enter Album Name</label>
+          <label htmlFor="trackInput">Enter Track Name</label>
           <input name="trackName" type="text" className="form-control" id="trackInput" placeholder="Enter Track Name" value={this.state.name} onChange={this._handleInput}/>
         </div>
 

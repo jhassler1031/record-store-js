@@ -10,7 +10,7 @@ class Track extends Component {
 
   render() {
     return (
-      <div className="col-12 trackContainer">
+      <div className="col-12 col-md-4 trackContainer">
         <p className="trackName">{this.props.track.trackName}</p>
         <input type="button" className="btn btn-danger" value="Delete Track" onClick={this.props.deleteTrack}/>
       </div>

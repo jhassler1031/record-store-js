@@ -49,9 +49,11 @@ class Band extends Component {
 
 
         <div id={`album${this.props.band.id}`} className="row justify-content-center collapse">
-          <p>Albums</p>
+          <p className="col-12">Albums</p>
           {$albums}
-          <AlbumForm addAlbum={this._addAlbum}/>
+          <div className="col-12">
+            <AlbumForm addAlbum={this._addAlbum}/>
+          </div>
         </div>
 
         <input type="button" className="btn btn-danger" value="Delete Band" onClick={this.props.deleteBand}/>
